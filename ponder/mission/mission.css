@@ -4,7 +4,7 @@ body {
 }
 
 hr {
-  width: 75%;
+  width: 80%;
   margin-top: 10px;
   border: .5px solid darkgrey;
 }
@@ -49,9 +49,9 @@ img {
   height: auto;
 }
 
-#content #topics:p ol {
+/* #content #topics:p ol {
   font-size: 16px;
-}
+} */
 
 .font {
   font-family: "Balthazar", serif;
@@ -72,7 +72,7 @@ img {
   font-size: 16px;
   line-height: 1.6;
   padding-left: 60px;
-  padding-right: 20px;
+  padding-right: 50px;
 }
 
 /* .list,li{
