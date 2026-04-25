@@ -1,0 +1,81 @@
+body {
+  background-color: white;
+  font-family: system-ui, sans-serif;
+}
+
+hr {
+  width: 89%;
+  margin-top: 10px;
+  border: .5px solid darkgrey;
+}
+
+#content {
+  border: 1px solid darkgray;
+  margin: 40px auto;
+  padding: 70px;
+  max-width: 700px;
+  margin: 60 auto;
+  font-size: 14px;
+}
+#paragraph {
+  color: #035f9c;
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1.3px;
+}
+
+#content h1 {
+  text-align: center;
+  font-family: "Balthazar", serif;
+  font-size: 2.2em;
+}
+
+ol li {
+  margin-bottom: 20px;
+  font-family: "Balthazar", serif;
+  margin-left: 30px;
+}
+
+img {
+  display: block;
+  margin: 10px auto;
+  max-width: 200px;
+  margin-top: 40px;
+  width: 90px;
+  height: auto;
+}
+
+#content #topics:p ol {
+  font-size: 16px;
+}
+
+.font {
+  font-family: "Balthazar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#font {
+  font-size: 16px;
+  /* font-weight: bold; */
+  padding-left: 60px;
+}
+
+.list {
+  font-family: "Balthazar", serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+
+/* .list,li{
+padding-left: -10px;
+} */
+
+#topics {
+  margin-top: 50px;
+}
