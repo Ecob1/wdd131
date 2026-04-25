@@ -4,7 +4,7 @@ body {
 }
 
 hr {
-  width: 89%;
+  width: 75%;
   margin-top: 10px;
   border: .5px solid darkgrey;
 }
@@ -12,8 +12,9 @@ hr {
 #content {
   border: 1px solid darkgray;
   margin: 40px auto;
-  padding: 70px;
-  max-width: 700px;
+  padding: 50px;
+  max-width: 590px;
+  max-height: auto;
   margin: 60 auto;
   font-size: 14px;
 }
@@ -21,7 +22,7 @@ hr {
   color: #035f9c;
   font-size: 1em;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
   letter-spacing: 1.3px;
 }
 
@@ -29,6 +30,8 @@ hr {
   text-align: center;
   font-family: "Balthazar", serif;
   font-size: 2.2em;
+  letter-spacing: 1.3px;
+  font-weight: 100;
 }
 
 ol li {
