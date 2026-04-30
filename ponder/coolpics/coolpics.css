@@ -153,6 +153,13 @@ h1 {
     font-size: 1.2rem;
     color: white;
   }
+
+   footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 }
 
 @media screen and (max-width: 699px) {
@@ -208,7 +215,7 @@ h1 {
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
   }
 
-   footer {
+  footer {
     display: flex;
     justify-content: center;
     align-items: center;
