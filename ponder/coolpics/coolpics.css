@@ -91,13 +91,14 @@ h1 {
 }
 
 @media screen and (min-width: 700px) and (max-width: 999px) {
+  /* Hide desktop nav */
   nav ul {
     display: none;
   }
 
   #topImg {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* ← row is correct for your screenshot */
     align-items: center;
     gap: 0px;
     /* padding: auto; */
@@ -106,7 +107,7 @@ h1 {
   #topImg {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; /* centers Cool Pics + camera */
     align-items: center;
     gap: 6px;
   }
@@ -145,9 +146,9 @@ h1 {
   #menuButton {
     display: block;
     margin: 0 auto;
-    background-color: transparent;
-    border: none;
-    color: rgb(54, 145, 241); 
+    background-color: transparent; /* ← no background */
+    border: none; /* ← no border */
+    color: rgb(54, 145, 241); /* ← blue text */
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
@@ -159,7 +160,7 @@ h1 {
     align-items: center;
   }
 }
-}
+
 
 @media screen and (max-width: 699px) {
   main {
