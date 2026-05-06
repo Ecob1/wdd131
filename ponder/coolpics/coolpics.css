@@ -8,18 +8,23 @@ header {
 }
 
 dialog img {
-   width: 90%;
-  display: block;
-  margin: 20vh auto;
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
 }
 .close-viewer {
-  position: absolute;
-  top: 1vh;
-  right: 1vh;
-  padding: 3px 6px;
-  font-size: 1.5em;
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
 }
-
 
 footer {
   background-color: rgb(54, 145, 241);
@@ -83,7 +88,6 @@ h1 {
     margin: 0px;
     padding: 0px;
   }
-  /* // It was main before */
   main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -135,8 +139,7 @@ h1 {
     border: none;
   }
 
-  /* It was main before */
-  section {
+  main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -169,18 +172,10 @@ h1 {
     font-size: 1.2rem;
     color: white;
   }
-
-   footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
-
 @media screen and (max-width: 699px) {
-  /* It was main before I replaced for section */
-  section {
+  main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -232,7 +227,7 @@ h1 {
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
   }
 
-  footer {
+   footer {
     display: flex;
     justify-content: center;
     align-items: center;
