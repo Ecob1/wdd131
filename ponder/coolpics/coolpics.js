@@ -6,7 +6,7 @@ const closeButton = modal.querySelector(".close-viewer");
 gallery.addEventListener("click", openModal);
 
 function openModal(e) {
-// Code to show modal  - Use event parameter 'e'
+  // Code to show modal  - Use event parameter 'e'
 
   const img = e.target;
   const src = img.getAttribute("src");
@@ -30,3 +30,13 @@ modal.addEventListener("click", (event) => {
     modal.close();
   }
 });
+
+const btn = document.querySelector("#menuButton");
+const menu = document.querySelector("nav");
+
+btn.addEventListener("click", toggleMenu);
+
+function toggleMenu(){
+  menu.classList.toggle("show");
+  btn.classList.toggle("change");
+}

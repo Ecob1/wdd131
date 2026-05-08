@@ -8,22 +8,22 @@ header {
 }
 
 dialog img {
-    width: 70%;
-    height: 70%;
-    display: block;
-    margin: 20vh auto;
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin: 20vh auto;
 }
 dialog {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.75);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .close-viewer {
-    position: absolute;
-    top: 10vh;
-    right: 2vh;
-    padding: 3px 6px;
-    font-size: 1.5em;
+  position: absolute;
+  top: 18vh;
+  right: 21vh;
+  padding: 5px 10px;
+  font-size: 1.5em;
 }
 
 footer {
@@ -42,6 +42,13 @@ h1 {
   text-align: center;
   color: white;
 }
+
+/* #currentWork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
 @media screen and (min-width: 1000px) {
   header {
     display: flex;
@@ -81,6 +88,7 @@ h1 {
     border: 10px solid white;
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
   }
+
   nav ul {
     display: flex;
     gap: 50px;
@@ -88,11 +96,11 @@ h1 {
     margin: 0px;
     padding: 0px;
   }
+
   main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
-    border-: 5px white;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
@@ -110,23 +118,41 @@ h1 {
 }
 
 @media screen and (min-width: 700px) and (max-width: 999px) {
-  /* Hide desktop nav */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    color: white;
+  }
+
+  nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  nav {
     display: none;
   }
 
-  #topImg {
-    display: flex;
-    flex-direction: row; /* ← row is correct for your screenshot */
-    align-items: center;
-    gap: 0px;
-    /* padding: auto; */
+  nav.show {
+    display: block;
   }
 
   #topImg {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* centers Cool Pics + camera */
+    justify-content: center;
     align-items: center;
     gap: 6px;
   }
@@ -134,8 +160,8 @@ h1 {
   #camera {
     width: 20px;
     height: 20px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     border: none;
   }
 
@@ -165,16 +191,54 @@ h1 {
   #menuButton {
     display: block;
     margin: 0 auto;
-    background-color: transparent; /* ← no background */
-    border: none; /* ← no border */
-    color: rgb(54, 145, 241); /* ← blue text */
+    background-color: transparent;
+    border: none;
+    color: white;
     padding: 10px 20px;
     font-size: 1.2rem;
-    color: white;
+  }
+
+  .close-viewer {
+    position: absolute;
+    top: 18vh;
+    right: 12vh;
+    padding: 5px 10px;
+    font-size: 1.5em;
   }
 }
 
 @media screen and (max-width: 699px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    color: white;
+  }
+
+  nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.show {
+    display: block;
+  }
+
   main {
     display: grid;
     grid-template-columns: 1fr;
@@ -184,7 +248,10 @@ h1 {
   }
 
   nav ul {
-    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
   }
   #camera {
     width: 20px;
@@ -227,9 +294,17 @@ h1 {
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
   }
 
-   footer {
+  footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .close-viewer {
+    position: absolute;
+    top: 18vh;
+    right: 6vh;
+    padding: 5px 10px;
+    font-size: 1.5em;
   }
 }
