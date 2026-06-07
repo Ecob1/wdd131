@@ -7,6 +7,7 @@ const output = document.querySelector("#output");
 const errors = document.querySelector("#errors");
 const extraLabel = extraInfo.querySelector("label");
 
+
 function updateExtraInfo() {
   const value = type.value;
 

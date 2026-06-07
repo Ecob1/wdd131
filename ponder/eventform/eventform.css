@@ -52,3 +52,7 @@ button:hover {
   margin-top: 1rem;
   font-weight: bold;
 }
+
+#extraInfo[hidden] {
+  display: none !important;
+}
