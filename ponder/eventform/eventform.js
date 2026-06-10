@@ -1,16 +1,14 @@
 const eventForm = document.querySelector("#eventForm");
 const type = document.querySelector("#type");
 const extraInfo = document.querySelector("#extraInfo");
-const extraInput = document.querySelector("#extraInput"); // rename in HTML
+const extraInput = document.querySelector("#extraInput");
 const eventDate = document.querySelector("#eventDate");
 const output = document.querySelector("#output");
 const errors = document.querySelector("#errors");
 const extraLabel = extraInfo.querySelector("label");
 
-
 function updateExtraInfo() {
   const value = type.value;
-
   if (value === "student") {
     extraInfo.hidden = false;
     extraLabel.textContent = "Student I#";
@@ -105,4 +103,3 @@ eventForm.addEventListener("submit", function (event) {
   eventForm.reset();
   updateExtraInfo();
 });
-
