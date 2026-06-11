@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="charactercard.css" />
+    <script src="charactercard.js" defer></script>
+    <title>Charactercard</title>
+  </head>
+  <body>
+    <div class="card">
+      <img id="charImage" class="image" alt="Character Image" />
+
+      <div class="name" id="charName"></div>
+
+      <div class="stats">
+        <p><strong>Class:</strong> <span id="charClass"></span></p>
+        <p><strong>Level:</strong> <span id="charLevel"></span></p>
+        <p><strong>Health:</strong> <span id="charHealth"></span></p>
+      </div>
+      <div class="buttons">
+        <button id="attackBtn">Attacked</button>
+        <button id="levelBtn">Level Up</button>
+      </div>
+    </div>
+  </body>
+</html>
