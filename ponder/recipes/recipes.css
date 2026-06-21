@@ -1,0 +1,143 @@
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.balthazar-regular {
+  font-family: "Balthazar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1rem;
+  background-color: white;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.search input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-icon {
+  width: 24px;
+  height: auto;
+}
+
+.recipe-card {
+  margin-top: 1rem;
+}
+
+.recipe-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recipe-info {
+  padding-top: 0.5rem;
+}
+
+.tag {
+  color: #777;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.recipe-info h2 {
+  margin: 0.3rem 0;
+  font-size: 1.6rem;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
+}
+
+.description {
+  display: none;
+  color: #444;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #1900f8;
+}
+
+.social img {
+  width: 40px;
+  height: auto;
+}
+
+header,
+.search,
+.recipe-card,
+footer {
+  margin-bottom: 1.2rem;
+}
+
+/* ------------------------------
+   DESKTOP STYLES (600px+)
+------------------------------ */
+@media (min-width: 600px) {
+  .header {
+    justify-content: center;
+  }
+
+  .description {
+    display: block;
+  }
+
+  footer .social {
+    justify-content: flex-end;
+  }
+
+  .recipe-card {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .recipe-image {
+    width: 250px;
+  }
+ 
+.balthazar-regular {
+  font-family: "Balthazar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+}
