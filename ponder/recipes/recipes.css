@@ -125,6 +125,11 @@ footer {
     padding: 10px;
 }
 
+.search{
+    border-radius:11px ;
+    border: 1px solid #000;
+}
+
 header,
 .search,
 .recipe-card,
