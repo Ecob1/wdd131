@@ -280,13 +280,21 @@ const recipes = [
   },
 ];
 
-// 1. Select the container and search box
-let recipeContainer = document.querySelector("#recipe-container");
-let searchInput = document.querySelector("input");
-let searchButton = document.querySelector("#search-btn");
+// ----------------------------
+// TEMPLATE HELPERS
+// ----------------------------
 
-// 2. Add search click event
-searchButton.addEventListener("click", search);
+function tagTemplate(tags) {
+  return tags.map((tag) => `<button class="tag-btn">${tag}</button>`).join(" ");
+}
+
+function ratingTemplate(rating) {
+  return "★".repeat(rating) + "☆".repeat(5 - rating);
+}
+
+// ----------------------------
+// CARD TEMPLATE
+// ----------------------------
 
 function recipeTemplate(recipe) {
   return `
@@ -294,21 +302,45 @@ function recipeTemplate(recipe) {
       <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image" />
 
       <div class="recipe-info">
-        <p class="tag">${recipe.tags[0]}</p>
-        <h2 id="balthazar" class="balthazar-regular">${recipe.name}</h2>
+        <div class="tags">${tagTemplate(recipe.tags)}</div>
 
-        <div class="stars">${"★".repeat(recipe.rating)}${"☆".repeat(
-    5 - recipe.rating
-  )}</div>
+        <h2 class="balthazar-regular">${recipe.name}</h2>
+
+        <div class="stars">${ratingTemplate(recipe.rating)}</div>
 
         <p class="description">${recipe.description}</p>
       </div>
     </section>
   `;
 }
+
+// ----------------------------
+// RENDERING
+// ----------------------------
+
+let recipeContainer = document.querySelector("#recipe-container");
+let searchInput = document.querySelector("#search");
+let searchButton = document.querySelector("#search-btn");
+
 function renderRecipe(recipe) {
   recipeContainer.innerHTML += recipeTemplate(recipe);
 }
+
+// ----------------------------
+// SORTING (like hikes.js)
+// ----------------------------
+
+// function compareRecipes(a, b) {
+//   return b.rating - a.rating; // highest rating first
+// }
+
+// ----------------------------
+// SEARCH FUNCTION
+// ----------------------------
+function compareAlphabetic(a, b) {
+  return a.name.localeCompare(b.name);
+}
+
 function search() {
   let query = searchInput.value.toLowerCase();
 
@@ -319,12 +351,20 @@ function search() {
       recipe.tags.some((tag) => tag.toLowerCase().includes(query))
   );
 
+  let sorted = filtered.sort(compareAlphabetic);
+
   recipeContainer.innerHTML = "";
-  filtered.forEach(renderRecipe);
+  sorted.forEach(renderRecipe);
 }
+
+searchButton.addEventListener("click", search);
+
+// ----------------------------
+// INIT — show ALL recipes
+// ----------------------------
+
 function init() {
-  let random = Math.floor(Math.random() * recipes.length);
-  renderRecipe(recipes[random]);
+  recipes.forEach(renderRecipe);
 }
 
 init();
